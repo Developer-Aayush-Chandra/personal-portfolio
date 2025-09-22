@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aayush Portfolio</title>
+  <style>
+    /* ===== General Reset ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f2027;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 100px 10%;
+    }
+
+    /* ===== Hero Section ===== */
+    #hero {
+      background: linear-gradient(to right, #141e30, #243b55);
+      text-align: center;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    #hero .hero-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 4px solid #00f7ff;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 0 30px rgba(0, 247, 255, 0.6);
+    }
+    #hero h1 {
+      font-size: 2.8rem;
+      color: #00f7ff;
+      margin-bottom: 15px;
+    }
+    #hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ===== About Section ===== */
+    #about {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow: hidden;
+    }
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      align-items: center;
+      max-width: 1100px;
+      z-index: 1;
+      position: relative;
+    }
+    .about-image img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #00f7ff;
+      box-shadow: 0 0 30px rgba(0, 247, 255, 0.5);
+    }
+    .about-content {
+      flex: 1;
+    }
+    .about-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #00f7ff;
+    }
+    .about-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .timeline-item {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-left: 4px solid #00f7ff;
+      border-radius: 8px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .timeline-item:hover {
+      transform: translateX(10px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .timeline-item h3 {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+      color: #00f7ff;
+    }
+
+    /* ===== Bubble Animation ===== */
+    .bubbles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0; left: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .bubbles span {
+      position: absolute;
+      bottom: -50px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: rgba(0, 247, 255, 0.3);
+      border-radius: 50%;
+      animation: bubbleUp 6s linear infinite;
+    }
+    .bubbles span:nth-child(1) { left: 10%; width: 25px; height: 25px; animation-duration: 5s; }
+    .bubbles span:nth-child(2) { left: 20%; width: 15px; height: 15px; animation-duration: 4s; }
+    .bubbles span:nth-child(3) { left: 35%; width: 20px; height: 20px; animation-duration: 6s; }
+    .bubbles span:nth-child(4) { left: 50%; width: 30px; height: 30px; animation-duration: 7s; }
+    .bubbles span:nth-child(5) { left: 65%; width: 18px; height: 18px; animation-duration: 4.5s; }
+    .bubbles span:nth-child(6) { left: 75%; width: 22px; height: 22px; animation-duration: 5.5s; }
+    .bubbles span:nth-child(7) { left: 85%; width: 28px; height: 28px; animation-duration: 6.5s; }
+    .bubbles span:nth-child(8) { left: 90%; width: 16px; height: 16px; animation-duration: 3.8s; }
+    .bubbles span:nth-child(9) { left: 40%; width: 24px; height: 24px; animation-duration: 5.2s; }
+    .bubbles span:nth-child(10){ left: 55%; width: 19px; height: 19px; animation-duration: 4.7s; }
+
+    @keyframes bubbleUp {
+      0%   { transform: translateY(0) scale(1); opacity: 0.5; }
+      50%  { opacity: 1; }
+      100% { transform: translateY(-700px) scale(1.2); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Hero Section ===== -->
+  <section id="hero">
+    <img src="https://via.placeholder.com/300" alt="Aayush" class="hero-img">
+    <h1>Hi, I'm Aayush 👋</h1>
+    <p>
+      A learner and web developer in progress, blending creativity with code  
+      to craft smooth and engaging digital experiences.
+    </p>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about">
+    <div class="bubbles">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span>
+    </div>
+
+    <div class="about-container">
+      <!-- Left side: photo -->
+      <div class="about-image">
+        <img src="https://via.placeholder.com/300" alt="Aayush">
+      </div>
+
+      <!-- Right side: about text -->
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+          I’m Aayush, a learner and web developer in progress, blending creativity  
+          with code to build experiences that stand out.
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>🎓 Education</h3>
+            <p>I’ve completed my 12th and currently pursuing my journey through the  
+               HCL TechBee scholarship programme — a space that challenges me to grow every day.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>💻 Experience</h3>
+            <p>I’ve built websites for fun and learning, each project sharpening my skills  
+               and fueling my passion for web development.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>🚀 Vision</h3>
+            <p>My goal is simple — to keep learning, keep experimenting, and create solutions  
+               that not only look good but work seamlessly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
